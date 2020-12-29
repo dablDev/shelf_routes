@@ -109,7 +109,7 @@ class Router {
   }
 
   /// Handle all request to [route] using [handler].
-  void all(String route, Function handler) {
+  void all(String route, shelf.Handler handler) {
     _routes.add(RouterEntry('ALL', route, handler));
   }
 
@@ -160,31 +160,31 @@ class Router {
   ///
   /// If no matching handler for `HEAD` requests is registered, such requests
   /// will also be routed to the [handler] registered here.
-  void get(String route, Function handler) => add('GET', route, handler);
+  void get(String route, shelf.Handler handler) => add('GET', route, handler);
 
   /// Handle `HEAD` request to [route] using [handler].
-  void head(String route, Function handler) => add('HEAD', route, handler);
+  void head(String route, shelf.Handler handler) => add('HEAD', route, handler);
 
   /// Handle `POST` request to [route] using [handler].
-  void post(String route, Function handler) => add('POST', route, handler);
+  void post(String route, shelf.Handler handler) => add('POST', route, handler);
 
   /// Handle `PUT` request to [route] using [handler].
-  void put(String route, Function handler) => add('PUT', route, handler);
+  void put(String route, shelf.Handler handler) => add('PUT', route, handler);
 
   /// Handle `DELETE` request to [route] using [handler].
-  void delete(String route, Function handler) => add('DELETE', route, handler);
+  void delete(String route, shelf.Handler handler) => add('DELETE', route, handler);
 
   /// Handle `CONNECT` request to [route] using [handler].
-  void connect(String route, Function handler) =>
+  void connect(String route, shelf.Handler handler) =>
       add('CONNECT', route, handler);
 
   /// Handle `OPTIONS` request to [route] using [handler].
-  void options(String route, Function handler) =>
+  void options(String route, shelf.Handler handler) =>
       add('OPTIONS', route, handler);
 
   /// Handle `TRACE` request to [route] using [handler].
-  void trace(String route, Function handler) => add('TRACE', route, handler);
+  void trace(String route, shelf.Handler handler) => add('TRACE', route, handler);
 
   /// Handle `PATCH` request to [route] using [handler].
-  void patch(String route, Function handler) => add('PATCH', route, handler);
+  void patch(String route, shelf.Handler handler) => add('PATCH', route, handler);
 }
